@@ -30,15 +30,14 @@ const settcarrito = objeto => {
     pintarcarrito();
 };
 
-
 const pintarcarrito = () => {
     cart.innerHTML = '';
+    counter();
     if(Object.keys(carrito).length === 0){
         let span = document.createElement('span');
         span.innerHTML = 'Your cart is empty';
         fragmento.appendChild(span);
         cart.appendChild(fragmento);
-        counter();
         return
     }
     Object.values(carrito).forEach(producto => {
@@ -58,7 +57,6 @@ const pintarcarrito = () => {
         fragmento.appendChild(div);
         cart.appendChild(fragmento);
     });
-    counter();
     let checkbtn = document.createElement('button');
     checkbtn.innerHTML = 'CHECK CART'
     checkbtn.classList.add('checkcart')
@@ -76,7 +74,6 @@ const borrarcart = (e) => {
         pintarcarrito();
     }
 }
-
 
 const coauntercart = document.querySelector('.cart')
 
