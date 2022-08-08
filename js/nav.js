@@ -16,3 +16,10 @@ menubtnout.forEach(element => {
     });
 });
 
+const carritomenu = document.querySelector('.cartadd');
+const carritomenubtn = document.querySelector('.nav__user--cart');
+
+carritomenubtn.addEventListener('click', () => {
+    carritomenu.classList.toggle('cartadd-toggle');
+});
+
