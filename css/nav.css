@@ -1,0 +1,183 @@
+:root {
+    --Very-vark-blue: hsl(220, 13%, 13%);
+    --Darkgrayishblue: hsl(219, 9%, 35%);
+    --Grayishblue: hsl(220, 14%, 65%);
+    --Lightgrayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+}
+
+.nav {
+    display: flex;
+    height: 4rem;
+    border-bottom: solid 2px var(--Grayishblue);
+    justify-content: space-between;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--White);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+
+.nav__logo{
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+}
+
+.nav__logo,
+.nav__user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+.nav__user--menu{
+    cursor: pointer;
+}
+.nav__nav {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    left: 100%;
+}
+
+.nav__nav-toggle {
+    animation: shownav 200ms ease;
+    left: 0%;
+}
+
+@keyframes shownav {
+    0% {
+        transform: translate3d(100%,0,0);
+    }
+
+    100% {
+        transform: translate3d(0,0,0);
+    }
+}
+
+.shadow {
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(rgba(5, 7, 12, 0.4),rgba(5, 7, 12, 0.4));
+}
+
+.nav__nav__list {
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__nav__list--element:first-of-type {
+    align-self: flex-start;
+    padding-left: 1rem;
+    cursor: pointer;
+}
+
+.nav__nav__list--element {
+    list-style: none;
+    height: 4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.nav__nav__list--element a {
+    text-decoration: none;
+    color: var(--Grayishblue);
+    font-weight: bold;
+    display: flex;
+    padding: 0rem 0.2rem;
+    align-items: center;
+    height: 100%;
+}
+
+.nav__nav__list--element a:hover {
+    color: var(--Darkgrayishblue);
+    margin-right: 1rem;
+    transition: all 100ms ease;
+}
+.nav__user--cart img {
+    width: 2rem;
+}
+
+.nav__user--avatar img {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.nav__user--menu img,
+.nav__nav__list--element img {
+    width: 1.5rem;
+}
+
+.nav__logo div img {
+    height: 4rem;
+    min-width: 2rem;
+}
+
+@media screen and (min-width:725px) {
+    .nav__user--menu,
+    .nav__nav__list--element:first-of-type,
+    .shadow {
+        display: none
+    };
+    .nav__container {
+        width: 100vw;
+    }
+    .nav {
+        display: flex;
+        height: 4rem;
+        justify-content: space-between;
+        margin: auto;
+    }
+    .nav__nav-toggle {
+        animation: none;
+    }
+    .nav__nav {
+        left: 0%;
+        flex-grow: 1;
+        position: static;
+        height: 4rem;
+        border-bottom: solid 2px var(--Grayishblue);
+        display: flex;
+        justify-content: center;
+    }
+    .nav__nav__list {
+        height: 100%;
+        max-width: 30rem;
+        min-width: 20rem;
+        display: flex;
+        flex-direction: row;
+        padding-right: 0%;
+        justify-content: space-between;
+    }
+    .nav__nav__list--element {
+        padding-right: 0;
+    }
+    .nav__nav__list--element  a {
+        width: 100%;
+        height: 100%;
+        border-bottom: solid 2px transparent;
+    }
+    .nav__nav__list--element a:hover {
+        margin: 0;
+        transition: none;
+        color: var(--Darkgrayishblue);
+        border-bottom: solid 2px var(--Darkgrayishblue);
+    }
+    .nav__logo{
+        width: 11rem;
+    }
+    .nav__user {
+        width: 11rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+};
+

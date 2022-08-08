@@ -1,0 +1,47 @@
+.productos {
+    margin-top: 2rem;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+.productos__class {
+    background-color: var(--Very-vark-blue);
+    color: var(--White);
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.7rem;
+}
+
+.productos__productos-producto {
+    width: 10rem;
+    height: 14rem;
+    background-color: red;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.productos__productos--producto--img {
+    width: 6.2rem;
+    height: 7rem;
+    background-color: blue;
+    align-self: center;
+}
+
+.productos__productos--producto__producto {
+    font-size: 1.2rem;
+}
+
+.productos__productos--producto__price {
+    background-color: royalblue;
+    font-size: 1rem;
+    
+}
+
+.productos__productos-producto__add {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    letter-spacing: 0.1rem;
+}
